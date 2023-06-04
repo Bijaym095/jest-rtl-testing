@@ -12,12 +12,27 @@ const Counter = () => {
   };
 
   return (
-    <div>
-      <h1>Counter</h1>
-      <h3>Count: {count}</h3>
+    <div className="grid place-items-center h-screen w-screen">
+      <div className="border border-black text-center p-10">
+        <h1 className="text-blue-400 font-bold mb-4 text-lg">Counter</h1>
 
-      <button onClick={handleIncrement}>Increment</button>
-      <button onClick={handleDecrement}>Decrement</button>
+        <h3 className="mb-2">Count: {count}</h3>
+
+        <div className="space-x-4">
+          <button
+            className="font-medium px-4 py-2 text-white bg-blue-400 hover:bg-blue-500 active:bg-blue-700 transition-colors duration-300"
+            onClick={handleIncrement}
+          >
+            Increment
+          </button>
+          <button
+            className="font-medium px-4 py-2 text-white bg-blue-400 hover:bg-blue-500 active:bg-blue-700 transition-colors duration-300"
+            onClick={handleDecrement}
+          >
+            Decrement
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
